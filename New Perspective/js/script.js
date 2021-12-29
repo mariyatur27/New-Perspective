@@ -42,6 +42,29 @@ function showAll() {
 // Date Filter
 function newFilter() {
 	var dates = document.getElementsByClassName('news_box');
+	let newsletter_cards = {};
+	let dates_list = [];
+	for (var i = 0; i < dates.length; i++) {
+		let release_dates = new Date(dates[i].getAttribute('data-value'));
+		dates_list.push(release_dates);
+		if (release_dates in newsletter_cards) {
+			newsletter_cards[release_dates].push(dates[i]);
+		} else {
+			newsletter_cards[release_dates] = [dates[i]];
+		}
+	}
+	dates_list.sort();
+	let news_boxes_div = document.getElementById("news_boxes");
+	for (const date of dates_list) {
+		for (const box of newsletter_cards[date]) {
+			news_boxes_div.removeChild(box);
+			news_boxes_div.appendChild(box);
+		}
+	}
+}
+/*
+function newFilter() {
+	var dates = document.getElementsByClassName('news_box');
 	var days_list = [];
 	let a_list = [];
 	var today = new Date();
@@ -79,3 +102,4 @@ function newFilter() {
 		console.log("test");
 	});
 }
+*/
