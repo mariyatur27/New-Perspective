@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Perspective</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<!-- Navigation Bar -->
+	<div class="navbar">
+		<navbar id="navbar">
+			<ul class="menu-ul">
+				<img class="logo_txt" src="assets/text_logo.jpg">
+				<li><a href="index.html#contact">Connect with Me</a></li>
+				<li><a href="experiments.html">My Experiments</a></li>
+				<li><a href="archives.html">Newsletter Archive</a></li>
+				<li><a href="index.html">About</a></li>
+			</ul>
+		</navbar>
+	</div>
+
+	<!-- Main Section -->
+	<section class="main">
+		<h1>Newsletter Archive</h1>
+		<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus exercitationem nostrum quaerat numquam porro voluptatum eius consequuntur dolore, molestias quod, perspiciatis perferendis officia cum alias.</h2>
+		<a href=""><button class="signup" id="signup2">Subscribe Now</button></a>
+
+		<div class="search_bar">
+			<input class="search" id="search" name="search" placeholder="Search the name of a newsletter" onkeyup="searchPage()" onclick="edit()">
+			<a onclick="searchPage()" class="search_button">Search</a>
+		</div>
+		<div class="filters">
+			<button id="all_b" class="filter_b" onclick="showAll()">All</button>
+			<button id="productivity_b" class="filter_b" onclick="filter(this)">Productivity</button>
+			<button id="life_style_b" class="filter_b" onclick="filter(this)">Life Style</button>
+			<button id="experiments_b" class="filter_b" onclick="filter(this)">Experiments</button>
+			<button id="school_b" class="filter_b" onclick="filter(this)">School</button>
+			<button id="food_b" class="filter_b" onclick="filter(this)">Food</button>
+			<button id="new_b" class="filter_b" onclick="newFilter()">Newest</button>
+			<button id="old_b" class="filter_b">Oldest</button>
+		</div>
+		<div class="row">
+				<div class="news_box" data-value="12/18/2021 00:00">
+					<a href="article_1.html">
+						<img src="https://economist-static-files.s3.us-west-1.amazonaws.com/2020-03/home-study.jpg" class="news_image">
+					</a>
+					<div class="together2"><h5>12-18-21 - </h5><h5 class="category">Productivity</h5></div>
+					<a href="article_1.html" class="title_link">
+						<h2 class="news_name">Lorem ipsum dolor.</h2>
+					</a>
+					<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis et esse, fugiat quae modi autem, id quia velit. Iure veritatis ad alias, similique tempora numquam sit odit, cum amet.</h3>
+				</div>
+				<div class="news_box" data-value="12/28/2021 00:00">
+					<img src="https://economist-static-files.s3.us-west-1.amazonaws.com/2020-03/home-study.jpg" class="news_image">
+					<div class="together2"><h5>12-18-21 - </h5><h5 class="category">Life Style</h5></div>
+					<h2 class="news_name">Consectetur adipisicing.</h2>
+					<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero omnis et esse, fugiat quae modi autem, id quia velit. Iure veritatis ad alias, similique tempora numquam sit odit, cum amet.</h3>
+				</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="footer2">
+		<navbar>
+			<ul class="footer-ul">
+				<li><a href="index.html#contact" class="footer-il">Connect with Me</a></li>
+				<li><a href="experiments.html" class="footer-il">My Experiments</a></li>
+				<li><a href="archives.html" class="footer-il">Newsletter Archive</a></li>
+				<li><a href="#about_section" class="footer-il">About</a></li>
+			</ul>
+		</navbar>
+	</div>
+	</footer>
+
+</body>
+</html>
